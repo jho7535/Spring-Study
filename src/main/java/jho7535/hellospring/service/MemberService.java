@@ -2,18 +2,15 @@ package jho7535.hellospring.service;
 
 import jho7535.hellospring.domain.Member;
 import jho7535.hellospring.repository.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {
     private final MemberRepository memberRepository;
 
     // 생성자를 통해 외부에서 Repository를 주입받음
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
